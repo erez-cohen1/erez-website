@@ -1,28 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Website</title>
-    <link href="/styles/main.css" rel="stylesheet" />
-  </head>
-  <body>
-    <header role="banner">
-      <h1>Welcome to my Website!</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/magic-wand.png" />
+    <title>SpellMate 3000</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Henny+Penny&family=Nerko+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tillana:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero">
+      <h1>SpellMate 3000</h1>
+      <p>Your Personal Spell-Casting Companion</p>
+      <button id="getStartedButton" onclick="window.location.href='elements.html'">Get Started for Free</button>
     </header>
-    <main>
-      <p>This is a paragraph.</p>
-      <a href="/elements.html">Elements Page</a>
 
-      <div class="counter">
-        <h2>Counter</h2>
-        <button id="increment" class="counter-button">+</button>
-        <button id="decrement" class="counter-button">−</button>
-        <span id="count">0</span>
-      </div>
-    </main>
+    <!-- Features Section -->
+    <section class="features">
+        <h2>Features</h2>
+        <div class="feature-item">
+          <img src="public/spell-casting.jpg" alt="Spell Casting Coach">
+            <h3>Real-Time Spell Casting Coach</h3>
+            <p>Get personalized feedback on your wand movements and incantation clarity.</p>
+        </div>
+        <div class="feature-item">
+          <img src="public/harry-potter.jpg" alt="Dueling Simulations">
+            <h3>Advanced Dueling Simulations</h3>
+            <p>Practice dueling with simulated opponents, guided by Harry Potter himself.</p>
+        </div>
+        <div class="feature-item">
+          <img src="public/hermione.jpg" alt="Dueling Simulations">
+          <br>
+            <h3>Hermione's Study Mode</h3>
+            <p>Access detailed lessons on spell history, use cases, and wand lore.</p>
+        </div>
+        <div class="feature-item">
+          <img src="fred-george.jpeg" alt="Hermione's Study Mode">
+            <h3>Fred & George's Fun Spells</h3>
+            <p>Unlock playful and prank spells to spice up your magical practice.</p>
+        </div>
+    </section>
 
-    <script type="module" src="/main.js"></script>
-  </body>
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>Testimonials</h2>
+        <p>"I've perfected the Patronus charm, thanks to SpellMate. Expecto Patronum!" - Harry P.</p>
+        <p>"The best spell-learning companion I've ever used. Can't believe it talks back too!" - Hermione G.</p>
+        <p>"It's a blast! Turned Ron's shoes into dancing jellies using George's prank spell." - Ginny W.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>Special Offer: Enroll now to receive a custom wand calibration by <a href="https://harrypotter.fandom.com/wiki/Ollivanders" target="_blank" rel="noopener noreferrer">Ollivanders</a>.</p>
+      <br>
+      <p>&copy; 2024 SpellMate 3000</p>
+  </footer>
+  
+  <script src="main.js"></script>
+</body>
 </html>

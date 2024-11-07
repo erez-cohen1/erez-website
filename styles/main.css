@@ -1,158 +1,216 @@
+/* Basic Reset */
 @import url("reset.css");
-/* This is a custom font from google fonts */
+/* Custom Google Font */
 @import url("https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&display=swap");
 
-/* what is :root? https://developer.mozilla.org/en-US/docs/Web/CSS/:root */
-:root {
-  /* Define design variables */
-  --color-primary: #2b2d42;
-  --color-secondary: #bfc6d2;
-  --color-background: #f5f5f5;
-  --color-accent: #535bf2;
-
-  --border-radius: 0.5rem;
-
-  --font-titles: "Frank Ruhl Libre", serif;
-  --font-body: system-ui, sans-serif; /* system-ui matches the user's system font */
+/* General Styles */
+body, h1, h2, h3, p, button, footer {
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body {
-  color: var(--color-primary);
-  background-color: var(--color-background);
-  font-family: var(--font-body);
-}
-
-/* Layout */
-main {
-  padding: 2rem;
-}
-
-header {
-  padding: 1rem;
-}
-
-main,
-header,
-nav {
-  max-width: 60rem;
-  margin: 0 auto;
-}
-
-article,
-nav {
-  padding: 1rem 0;
-}
-
-.rtl {
-  direction: rtl;
-}
-
-/* Text */
-p {
-  margin: 1rem 0;
-}
-
-ul,
-ol {
-  margin-top: 0.5rem;
-}
-
-li {
-  margin-top: 0.3rem;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-top: 1rem;
-  font-family: var(--font-titles);
-  font-weight: 500;
-  font-optical-sizing: auto;
+/* Typography */
+h1, h2, h3, p {
+  font-family: "Roboto", serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
 h1 {
-  font-size: 2.5em;
+  font-family: "Tillana", system-ui;
+  font-weight: 700;
 }
 
 h2 {
-  font-size: 2em;
+  font-family: "Tillana", system-ui;
+  font-weight: 600;
 }
 
 h3 {
-  font-size: 1.5em;
+  font-family: "Tillana", system-ui;
+  font-weight: 400;
 }
 
-h4 {
-  font-size: 1.2em;
+/* Body Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #dee2e6;
+  color: #333;
+  padding: 0 1em;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-h5 {
+/* Hero Section */
+header.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #cdb4db;
+  color: white;
+  padding: 0.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+header.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Button Styling */
+#getStartedButton {
+  background-color: #f1ee07;
+  border: 2px solid #f1ee07;
+  padding: 0.5em 1em;
+  cursor: pointer;
   font-size: 1em;
+  font-family: "Henny Penny", serif;
+  font-weight: 400;
+  transition: background-color 0.3s ease-in-out;
+  border-radius: 0.5em;
+  position: relative;
+  overflow: hidden;
 }
 
-h6 {
-  font-size: 0.83em;
+#getStartedButton:hover {
+  background-color: #ffcc00;
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 204, 0, 0.7), 0 0 25px rgba(255, 204, 0, 0.7);
 }
 
-blockquote {
-  padding-left: 1rem;
-  border-left: 2px solid var(--color-secondary);
+#getStartedButton.active {
+  background-color: #0b0b0b;
+  color: #fff;
+  transform: scale(3);
+  transition: all 0.5s ease;
 }
 
-/* Links */
-a {
-  color: var(--color-accent);
-  text-decoration: underline;
+/* Features Section */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 2em;
 }
-a:hover {
+
+.features h2 {
+  font-size: 2em;
+  margin-bottom: 1.5em;
+  width: 100%;
+  text-align: center;
+}
+
+/* Feature Item Styling */
+.feature-item {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1em;
+  text-align: center;
+  width: 45%;
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.feature-item img {
+  width: 100%;
+  height: auto;
+  max-width: 200px;
+  object-fit: cover;
+  margin-bottom: 1em;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.feature-item img:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+
+.feature-item img.active:hover {
+  /* Optionally, you can add different styles when the active image is hovered */
+  transform: scale(1.3) rotate(20deg);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s ease-in-out, box-shadow 0.3s ease-in-out;
+
+}
+.feature-item img {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.feature-item img.active {
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Match transitions */
+}
+
+.features .feature-item h3 {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.features .feature-item p {
+  font-size: 1.1em;
+  flex-grow: 1;
+}
+
+/* Testimonials Section */
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  padding: 1em;
+  border-radius: 0.5em;
+  margin-bottom: 2em;
+  border: 3px solid #cdb4db;
+  transition: transform 0.3s ease;
+}
+
+.testimonials:hover {
+  transform: scale(1.02);
+}
+
+.testimonials p {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1em;
+  background-color: #333;
+  color: white;
+  margin-top: auto;
+}
+
+footer a {
+  color: #ffcc00;
   text-decoration: none;
 }
 
-/* Tables */
-table {
-  margin-top: 1.5rem;
-  border-spacing: 0px;
-  border-collapse: collapse;
-}
-table td,
-table th {
-  padding: 0.5rem;
-  border: 1px solid var(--color-secondary);
-}
-
-/* Forms */
-input,
-button,
-textarea,
-select {
-  padding: 0.2em 0.5em;
-  border: 1px solid var(--color-secondary);
-  border-radius: var(--border-radius);
-}
-
-fieldset {
-  margin-top: 1.5rem;
-  border: 1px solid var(--color-secondary);
-}
-
-.counter-button {
-  background-color: var(--color-accent);
-  width: 2rem;
-  height: 2rem;
-  color: white;
-  border: none;
-  border-radius: 1000px; /* Make the button round */
-  cursor: pointer;
-  font-weight: bold;
-
-  &:hover {
-    filter: brightness(120%);
-  }
-
-  &:active {
-    filter: brightness(80%);
-  }
+footer a:hover {
+  color: #ff6600;
+  text-decoration: underline;
 }

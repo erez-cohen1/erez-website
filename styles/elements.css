@@ -1,0 +1,148 @@
+/* Pricing Section */
+.pricing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+  background-image:url("/public/background.jpg"); /* Background Image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Optional for fixed background */
+}
+
+.pricing h2 {
+  font-size: 2.5em;
+  font-family: "Tillana", serif;
+  margin-bottom: 0.3em;
+  margin-top: 1em;
+}
+
+.pricing-options {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allow items to wrap if needed */
+  width: 80%;
+  max-width: 1200px; /* Max width of the container */
+  gap: 1.5em; /* Added gap between boxes */
+}
+
+.pricing-box {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1.5em;
+  text-align: center;
+  width: 22%;  /* Reduced width to ensure fit in one row */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures button stays at the bottom */
+  min-height: 300px; /* Minimum height for uniform boxes */
+}
+
+/* Box text styles */
+.pricing-box h3 {
+  font-size: 1.6em;
+  color: #333;
+  margin-bottom: 1em;
+}
+
+.pricing-box p {
+  font-size: 1.1em;
+  color: #666;
+  margin-bottom: 1.5em;
+}
+
+.pricing-box ul {
+  text-align: left;
+  font-size: 1em;
+  margin-bottom: 1.5em;
+  padding-left: 20px;
+  flex-grow: 1;
+}
+
+/* Button styles */
+.pricing-box .pricing-button {
+  background-color: #ffcc00;
+  border: none;
+  padding: 0.7em 2em;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: background-color 0.8s ease, transform 0.5s ease;
+  margin-top: auto;
+  width: 100%;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hover Effects for Pricing Box */
+.pricing-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(183, 152, 30, 0.7);
+  border: 2px solid #ffcc00;
+}
+
+/* Hover Effects for Pricing Button (Only Button Hover) */
+.pricing-button:hover {
+  background-color: #d34adc;
+  transform: translateY(-3px);
+  animation: glow 1.5s infinite;
+}
+
+/* Magic Glow Effect for Buttons */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px rgba(223, 118, 176, 0.5), 0 0 20px rgba(205, 29, 29, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(223, 118, 176, 0.5), 0 0 20px rgba(205, 29, 29, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(223, 118, 176, 0.5), 0 0 20px rgba(205, 29, 29, 0.4);
+  }
+}
+
+/* Make sure the boxes are responsive */
+@media (max-width: 1024px) {
+  .pricing-box {
+      width: 48%;
+  }
+}
+
+@media (max-width: 768px) {
+  .pricing-box {
+      width: 100%;
+  }
+}
+
+/* Heading and text font styles */
+h1 {
+  font-family: "Tillana", system-ui;
+  font-weight: 700;
+  font-style: normal;
+}
+
+h2 {
+  font-family: "Tillana", system-ui;
+  font-weight: 600;
+  font-style: normal;
+}
+
+h3 {
+  font-family: "Tillana", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+p, li, ul {
+  font-family: "Roboto", serif;
+  font-weight: 300;
+  font-style: normal;
+}
