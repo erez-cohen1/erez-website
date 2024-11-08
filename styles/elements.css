@@ -1,65 +1,69 @@
+:root{
+  font-size: 16px;
+}
 /* Pricing Section */
 .pricing {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 1em;
-  background-image:url("/public/background.jpg"); /* Background Image */
+  align-items:center;
+  padding: 1rem;
+  background-image:url("/public/background.jpg"); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed; /* Optional for fixed background */
+  background-attachment: fixed; 
 }
 
 .pricing h2 {
-  font-size: 2.5em;
+  font-size: 2.5rem;
   font-family: "Tillana", serif;
-  margin-bottom: 0.3em;
-  margin-top: 1em;
+  margin-bottom: 0.3rem;
+  margin-top: 1rem;
 }
 
 .pricing-options {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content:space-between;
   flex-wrap: wrap; /* Allow items to wrap if needed */
   width: 80%;
   max-width: 1200px; /* Max width of the container */
-  gap: 1.5em; /* Added gap between boxes */
+  gap: 1rem; /* gap between boxes */
 }
 
 .pricing-box {
   background-color: #fff;
-  border-radius: 10px;
-  padding: 1.5em;
+  border-radius: 0.5rem;
+  padding: 1rem;
   text-align: center;
-  width: 22%;  /* Reduced width to ensure fit in one row */
+  width: 25%;  /* Reduced width to ensure fit in one row */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Ensures button stays at the bottom */
-  min-height: 300px; /* Minimum height for uniform boxes */
+  justify-content:center;
+  min-height: 8rem; /* Minimum height for uniform boxes */
 }
 
 /* Box text styles */
 .pricing-box h3 {
-  font-size: 1.6em;
+  font-size: 1.6rem;
   color: #333;
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 }
 
 .pricing-box p {
-  font-size: 1.1em;
+  font-size: 1.1rem;
   color: #666;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.5rem;
 }
 
 .pricing-box ul {
   text-align: left;
-  font-size: 1em;
-  margin-bottom: 1.5em;
-  padding-left: 20px;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  padding-left: 1.2rem;
   flex-grow: 1;
 }
 
@@ -67,16 +71,16 @@
 .pricing-box .pricing-button {
   background-color: #ffcc00;
   border: none;
-  padding: 0.7em 2em;
-  font-size: 1.1em;
+  padding: 0.7rem 2rem;
+  font-size: 1.1rem;
   font-weight: bold;
   color: white;
   cursor: pointer;
-  border-radius: 25px;
+  border-radius: 1.3rem;
   transition: background-color 0.8s ease, transform 0.5s ease;
   margin-top: auto;
   width: 100%;
-  min-height: 50px;
+  min-height: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -89,14 +93,14 @@
   border: 2px solid #ffcc00;
 }
 
-/* Hover Effects for Pricing Button (Only Button Hover) */
+/* Hover Effects for Pricing Button*/
 .pricing-button:hover {
   background-color: #d34adc;
-  transform: translateY(-3px);
+  transform: translateY(-0.2rem);
   animation: glow 1.5s infinite;
 }
 
-/* Magic Glow Effect for Buttons */
+/* Glow Effect for Buttons */
 @keyframes glow {
   0% {
     box-shadow: 0 0 10px rgba(223, 118, 176, 0.5), 0 0 20px rgba(205, 29, 29, 0.4);
@@ -109,14 +113,14 @@
   }
 }
 
-/* Make sure the boxes are responsive */
-@media (max-width: 1024px) {
+
+@media (max-width: 70rem) {
   .pricing-box {
-      width: 48%;
+      width: 28%;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 69rem) {
   .pricing-box {
       width: 100%;
   }
@@ -145,4 +149,15 @@ p, li, ul {
   font-family: "Roboto", serif;
   font-weight: 300;
   font-style: normal;
+}
+#popupMessage {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem;
+  background: white;
+  border: 0.1rem solid #5a4f4f;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

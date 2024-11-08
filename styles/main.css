@@ -2,7 +2,9 @@
 @import url("reset.css");
 /* Custom Google Font */
 @import url("https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&display=swap");
-
+:root{
+  font-size: 11px;
+}
 /* General Styles */
 body, h1, h2, h3, p, button, footer {
   font-style: normal;
@@ -35,11 +37,10 @@ h3 {
 
 /* Body Styles */
 body {
-  font-family: 'Arial', sans-serif;
   line-height: 1.6;
   background-color: #dee2e6;
   color: #333;
-  padding: 0 1em;
+  padding: 0.1rem;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -72,7 +73,7 @@ header.hero p {
 #getStartedButton {
   background-color: #f1ee07;
   border: 2px solid #f1ee07;
-  padding: 0.5em 1em;
+  padding: 0.5rem 1rem;
   cursor: pointer;
   font-size: 1em;
   font-family: "Henny Penny", serif;
@@ -90,24 +91,17 @@ header.hero p {
   box-shadow: 0 0 15px rgba(255, 204, 0, 0.7), 0 0 25px rgba(255, 204, 0, 0.7);
 }
 
-#getStartedButton.active {
-  background-color: #0b0b0b;
-  color: #fff;
-  transform: scale(3);
-  transition: all 0.5s ease;
-}
-
 /* Features Section */
 .features {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin-bottom: 2em;
+  margin-bottom: 2rem;
 }
 
 .features h2 {
-  font-size: 2em;
-  margin-bottom: 1.5em;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
   width: 100%;
   text-align: center;
 }
@@ -115,11 +109,11 @@ header.hero p {
 /* Feature Item Styling */
 .feature-item {
   background-color: #fff;
-  border-radius: 8px;
-  padding: 1em;
+  border-radius:0.5rem;
+  padding: 1rem;
   text-align: center;
   width: 45%;
-  margin: 1em;
+  margin: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -135,10 +129,10 @@ header.hero p {
 
 .feature-item img {
   width: 100%;
-  height: auto;
+  height:18rem;
   max-width: 200px;
   object-fit: cover;
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
@@ -164,12 +158,12 @@ header.hero p {
 }
 
 .features .feature-item h3 {
-  font-size: 1.5em;
-  margin-bottom: 0.5em;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .features .feature-item p {
-  font-size: 1.1em;
+  font-size: 1.1rem;
   flex-grow: 1;
 }
 
@@ -179,9 +173,9 @@ header.hero p {
   flex-direction: column;
   align-items: center;
   background-color: white;
-  padding: 1em;
-  border-radius: 0.5em;
-  margin-bottom: 2em;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
   border: 3px solid #cdb4db;
   transition: transform 0.3s ease;
 }
@@ -191,15 +185,15 @@ header.hero p {
 }
 
 .testimonials p {
-  font-size: 1.2em;
-  margin-bottom: 1em;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
   text-align: center;
 }
 
 /* Footer */
 footer {
   text-align: center;
-  padding: 1em;
+  padding: 1rem;
   background-color: #333;
   color: white;
   margin-top: auto;
@@ -214,3 +208,4 @@ footer a:hover {
   color: #ff6600;
   text-decoration: underline;
 }
+
